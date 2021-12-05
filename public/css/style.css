@@ -1,0 +1,21 @@
+#menu-outer {
+	height: 84px;
+	background: url(images/bar-bg.jpg) repeat-x;
+
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+ul#horizontal-list {
+	list-style: none;
+	padding-top: 30px;
+    padding-bottom: 25px;
+	}
+	ul#horizontal-list li {
+		display: inline;
+	}
+
+
