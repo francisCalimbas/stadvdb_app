@@ -1,0 +1,30 @@
+{{>navbar}}
+<section>
+    <h1>Movies</h1>
+    <form id = "form">
+        <label>Movies<label>
+        <br>
+        <label>with the number of actors/actresses</label>
+        <select name="numofroleschoice" id="numofroleschoice" >
+            <option value = "" selected='true'></option>
+            <option value="ATLEAST">ATLEAST</option>
+            <option value="EQUAL TO">EQUAL TO</option>
+            <option value="MORE THAN">MORE THAN</option>
+        </select>
+        <input name="numofrolesint" id="numofrolesint" placeholder="No. of Actors">
+        <br>
+        </label>released on</label>
+        <select name="releasedonschoice" id="releasedonschoice" >
+            <option value = "" selected='true'></option>
+            <option value="ATLEAST">ATLEAST</option>
+            <option value="EQUAL TO">EQUAL TO</option>
+            <option value="MORE THAN">MORE THAN</option>
+        </select>
+        <input name="releasedonint" id="releasedonint" placeholder="Year">
+        <br>
+        <label>with a genre of</label>
+        <input name="genre" id="genre" placeholder="Genre">
+        <br>
+        <button id ="formsumbit">Submit!</button>
+    </form>
+</section>
