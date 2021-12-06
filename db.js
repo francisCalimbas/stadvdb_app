@@ -11,23 +11,23 @@ const mysql = require("mysql2");
 //   database: "imdb_dw",
 // });
 
-//raven
-// const db = mysql.createConnection({
-//   host: "localhost",
-//   user: "root",
-//   password: "12345",
-//   port: "3310",
-//   database: "imdb_dw",
-// });
-
-// francis
+// raven
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "12345",
-  port: "3306",
-  database: "imdb_dw1",
+  port: "3310",
+  database: "imdb_dw",
 });
+
+// francis
+// const db = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "12345",
+//   port: "3306",
+//   database: "imdb_dw1",
+// });
 
 db.connect();
 

@@ -151,7 +151,7 @@ const controller = {
     if (releasedonint !== null && releasedonint !== undefined && releasedonint !== '') {
       if (releasedonschoice === 'ATLEAST') {
         if (whereFlag == 0) {
-          query = query.concat('WHERE `F`.`year` > ' + releasedonint);
+          query = query.concat(' WHERE `F`.`year` > ' + releasedonint);
           whereFlag = 1;
         } else if (whereFlag == 1) {
           query = query.concat(' AND `F`.`year` > ' + releasedonint);
@@ -159,14 +159,16 @@ const controller = {
         // end
       } else if (releasedonschoice === 'EQUAL TO') {
         if (whereFlag == 0) {
-          query = query.concat('WHERE `F`.`year` = ' + releasedonint);
+          query = query.concat(' WHERE `F`.`year` = ' + releasedonint);
+          whereFlag = 1;
         } else if (whereFlag == 1) {
           query = query.concat(' AND `F`.`year` = ' + releasedonint);
         }
         // end
       } else if (releasedonschoice === 'LESS THAN') {
         if (whereFlag == 0) {
-          query = query.concat('WHERE `F`.`year` < ' + releasedonint);
+          query = query.concat(' WHERE `F`.`year` < ' + releasedonint);
+          whereFlag = 1;
         } else if (whereFlag == 1) {
           query = query.concat(' AND `F`.`year` < ' + releasedonint);
         }
@@ -177,7 +179,7 @@ const controller = {
     // 2nd where
     if (genre !== null && genre !== undefined && genre !== '') {
       if (whereFlag == 0) {
-        query = query.concat('WHERE `MG`.`genre` = ' + '\'' + genre + '\'');
+        query = query.concat(' WHERE `MG`.`genre` = ' + '\'' + genre + '\'');
         whereFlag = 1;
       } else if (whereFlag == 1) {
         query = query.concat(' AND `MG`.`genre` = ' + '\'' + genre + '\'');
