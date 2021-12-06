@@ -109,7 +109,7 @@ const controller = {
         console.log(results); // results contains rows returned by server
         const data = {
           styles: ['style'],
-          scripts: [ 'navbar','genre'],
+          scripts: [ 'navbar','director'],
           title: "Directors", // title of the web page
           results: results
         }

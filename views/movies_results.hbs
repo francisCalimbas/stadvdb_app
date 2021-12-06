@@ -1,11 +1,6 @@
 <meta charset="utf-8">
     <title>TABLES</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
 
 {{>navbar}}
 <section>
@@ -17,24 +12,21 @@
                 <th>Role Count </th>
             </tr>
         </thead>
+         <tbody>
     {{#each results}}
                                 {{!--  movie_name: 'name', role_cnt: 123--}}
 
-        <tbody>
+       
             <tr>
                 <td>{{this.movie_name}}</td>
                 <td>{{this.role_cnt}}</td>
             </tr>
-        </tbody>
+     
  
 
      {{!--   {{this.movie_name}}, {{this.role_cnt}} <br> --}}
     {{/each}}
+       </tbody>
     </table>
 </section>
 
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#example').DataTable();
-} );
-</script>

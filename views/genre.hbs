@@ -37,7 +37,7 @@
 
 <section>
     <h1 style = "padding-left: 700px;">MOVIES QUERY</h1>
-    <form style = "display: inline-block; padding-left: 600px;" id = "form" method="get" action="/fetchDirectors">
+    <form style = "display: inline-block; padding-left: 600px;" id = "form" method="get" action="/fetchGenres">
   <div>
     <label>Number of Movies with a genre of</label>
         <input name="genre" id="genre" placeholder="Genre">
@@ -46,19 +46,19 @@
         <label>that have a rank of</label>
         <select name="rankchoice" id="rankchoice" >
             <option value = "" selected='true'></option>
-            <option value="ATLEAST">ATLEAST</option>
+            <option value="ATLEAST">AT LEAST</option>
             <option value="EQUAL TO">EQUAL TO</option>
-            <option value="LESS THAN">LESS THAN</option>
+            <option value="LESS THAN">AT MOST</option>
         </select>
         <input name="rankint" id="rankint" placeholder="Rank">
         <br>
         <br>
-        </label>released on</label>
+        </label>released </label>
         <select name="releasedonschoice" id="releasedonschoice" >
             <option value = "" selected='true'></option>
-            <option value="ATLEAST">ATLEAST</option>
-            <option value="EQUAL TO">EQUAL TO</option>
-            <option value="LESS THAN">LESS THAN</option>
+            <option value="ATLEAST">AFTER</option>
+            <option value="EQUAL TO">ON</option>
+            <option value="LESS THAN">BEFORE</option>
         </select>
         <input name="releasedonint" id="releasedonint" placeholder="Year">
         <br>

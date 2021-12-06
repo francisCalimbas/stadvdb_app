@@ -1,11 +1,6 @@
 <meta charset="utf-8">
     <title>TABLES</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
 
 {{>navbar}}
 <section>
@@ -14,21 +9,23 @@
         <thead>
             <tr>
                 <th>Movie Count</th>
-                <th>Year</th>
+                <th>Genre</th>
             </tr>
         </thead>
+          <tbody>
     {{#each results}}
     
 
-        <tbody>
+      
             <tr>
                 <td>{{this.movie_cnt}}</td>
-                <td>{{this.year}}</td>
+                <td>{{this.genre}}</td>
             </tr>
-        </tbody>
+        
  
 
     {{/each}}
+    </tbody>
     </table>
 </section>
 

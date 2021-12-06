@@ -1,11 +1,22 @@
 const mysql = require("mysql2");
 
 // create the connection to database
+
+//Vhino
+// const db = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "Javachip_1199",
+//   port: "3306",
+//   database: "imdb_dw",
+// });
+
+//raven
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Javachip_1199",
-  port: "3306",
+  password: "12345",
+  port: "3310",
   database: "imdb_dw",
 });
 

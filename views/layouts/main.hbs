@@ -7,7 +7,10 @@
         <title>{{title}}</title>
 
         <base href="/">
-
+    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.css" >
+        <link  rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css" >
         {{!-- Fontawesome Library --}}
         {{#each styles}}
         <link rel="stylesheet" type="text/css" href="/css/{{this}}.css">
@@ -17,7 +20,11 @@
         
         {{{body}}}
         {{!-- JQuery --}}
-        <script src="/scripts/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.0/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
         <script src="/scripts/validator.min.js"></script>
         {{#each scripts}}
         <script type="text/javascript" src="/scripts/{{this}}.js"></script>
