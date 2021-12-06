@@ -1,14 +1,14 @@
-const mysql = require('mysql2');
+const mysql = require("mysql2");
 
 // create the connection to database
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '12345',
-  port: '3306',
-  database: 'imdb_dw1'
+  host: "localhost",
+  user: "root",
+  password: "Javachip_1199",
+  port: "3306",
+  database: "imdb_dw",
 });
- 
+
 db.connect();
 
 // db.query(
@@ -20,5 +20,5 @@ db.connect();
 // );
 
 module.exports = {
-  db: db
-}
+  db: db,
+};
