@@ -211,6 +211,7 @@ const controller = {
     })
   },
 
+  
   fetchGenres: (req, res) => {
     /*
       sample query:
@@ -303,7 +304,68 @@ const controller = {
         res.render('genre_results', data);
       }
     })
+  },
+
+  directorsranking: (req,res) => {
+
+    let query = `SELECT CONCAT(F.first_name, " ", F.last_name) AS director, COUNT(F.movie_name) AS movie_cnt FROM fact_table F JOIN movies_genres MG ON MG.movie_id = F.movie_id GROUP BY director ORDER BY movie_cnt DESC LIMIT 0,10;`;
+    db.query(query,function(err, results, fields) {
+      if (err) console.log(err);
+      else {
+        console.log(results); // results contains rows returned by server
+        const data = {
+          styles: ['style'],
+          scripts: [ 'navbar','directorrank'],
+          title: "Directors", // title of the web page
+          results: results
+        }
+        res.render('directorranking', data);
+      }
+    })
+  },
+
+  genresranking: (req,res) => {
+    let query = `SELECT MG.genre, FORMAT(AVG(F.rank), 2) AS Average_Rating FROM fact_table F JOIN movies_genres MG ON MG.movie_id = F.movie_id GROUP BY MG.genre ORDER BY Average_Rating DESC LIMIT 0,10;`;
+    db.query(query,function(err, results, fields) {
+      if (err) console.log(err);
+      else {
+        console.log(results); // results contains rows returned by server
+        const data = {
+          styles: ['style'],
+          scripts: [ 'navbar','genrerank'],
+          title: "Genres", // title of the web page
+          results: results
+        }
+        res.render('genresranking', data);
+      }
+    })
+  },
+  moviesranking: (req,res) => {
+    let query = `SELECT F.movie_name, F.rank FROM fact_table F WHERE F.rank IS NOT NULL ORDER BY F.rank DESC LIMIT 0,10;`;
+    db.query(query,function(err, results, fields) {
+      if (err) console.log(err);
+      else {
+        console.log(results); // results contains rows returned by server
+        const data = {
+          styles: ['style'],
+          scripts: [ 'navbar','movierank'],
+          title: "Movies", // title of the web page
+          results: results
+        }
+        res.render('moviesranking', data);
+      }
+    })
+  },
+    rankings: (req,res) => {
+      console.log("Rankings")
+      const data = {
+        styles: ['style'],
+        scripts: [ 'rankings','navbar'],
+        title: "Rankings" // title of the web page
+      }
+      res.render('rankings', data)
   }
+
 
 
 

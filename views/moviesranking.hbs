@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+    <title>TABLES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{{>navbar}}
+
+
+<section>
+
+    <div id = "datanames" style = "display:none;">
+        {{#each results}}
+            <h1 value ="{{this.movie_name}}">{{this.movie_name}}</h1>
+        {{/each}}
+    </div>
+    <div id = "datavalue"  style = "display:none;">
+        {{#each results}}
+            <h1 value ="{{this.rank }}">{{this.rank }}</h1>
+        {{/each}}
+    </div>
+   <h1>Top 10 Movies in Terms of Ranking</h1>
+ 
+<div class ="container mb-3 mt-3"> 
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Movie</th>
+                <th>Rank</th>
+            </tr>
+        </thead>
+          <tbody>
+    {{#each results}}
+    
+            <tr>
+                <td>{{this.movie_name}}</td>
+                <td>{{this.rank}}</td>
+            </tr>
+        
+    {{/each}}
+    </tbody>
+    </table>
+</div>
+    <div class = "container">
+        <canvas id ="myChart"></canvas>
+    </div>
+</section>
+
+

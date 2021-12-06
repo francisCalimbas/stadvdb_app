@@ -17,6 +17,10 @@ app.get('/genres', controller.getGenres)
 app.get('/fetchDirectors', controller.fetchDirectors)
 app.get('/fetchGenres', controller.fetchGenres)
 app.get('/fetchMovies', controller.fetchMovies)
+app.get('/directorsranking', controller.directorsranking)
+app.get('/genresranking', controller.genresranking)
+app.get('/moviesranking', controller.moviesranking)
+app.get('/rankings',controller.rankings)
 
 
 module.exports = app
