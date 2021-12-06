@@ -1,0 +1,8 @@
+{{>navbar}}
+<section>
+    <h1>Genre</h1>
+    {{#each results}}
+    {{!--  movie_cnt: 2, year: 1994 --}}
+        {{this.movie_cnt}}, {{this.genre}} <br>
+    {{/each}}
+</section>

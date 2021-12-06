@@ -1,7 +1,7 @@
 {{>navbar}}
 <section>
     <h1>Genre</h1>
-      <form id = "form">
+      <form id = "form" method="get" action="/fetchGenres">
         <label>Number of movies<label>
         <br>
         <label>with a genre of</label>
@@ -12,7 +12,7 @@
             <option value = "" selected='true'></option>
             <option value="ATLEAST">ATLEAST</option>
             <option value="EQUAL TO">EQUAL TO</option>
-            <option value="MORE THAN">MORE THAN</option>
+            <option value="LESS THAN">LESS THAN</option>
         </select>
         <input name="rankint" id="rankint" placeholder="Rank">
         <br>
@@ -21,10 +21,11 @@
             <option value = "" selected='true'></option>
             <option value="ATLEAST">ATLEAST</option>
             <option value="EQUAL TO">EQUAL TO</option>
-            <option value="MORE THAN">MORE THAN</option>
+            <option value="LESS THAN">LESS THAN</option>
         </select>
         <input name="releasedonint" id="releasedonint" placeholder="Year">
         <br>
-        <button id ="formsumbit">Submit!</button>
+        <input type="submit" id ="formsumbit"></submit>
+        {{!-- <button id ="formsumbit">Submit!</button> --}}
     </form>
 </section>

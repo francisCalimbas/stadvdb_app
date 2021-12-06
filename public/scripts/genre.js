@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $("#formsumbit").click(function (evt) {
-        evt.preventDefault()
+        // evt.preventDefault()
         formdata = $('#form').serializeArray()
         let data =
         {

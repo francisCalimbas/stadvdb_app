@@ -11,8 +11,8 @@ const db = mysql.createConnection({
  
 db.connect();
 
-// connection.query(
-//     'SELECT * FROM `fact_table` LIMIT 0, 10',
+// db.query(
+//     'SELECT * FROM fact_table LIMIT 0, 100',
 //     function(err, results, fields) {
 //       console.log(results); // results contains rows returned by server
 //     //   console.log(fields); // fields contains extra meta data about results, if available

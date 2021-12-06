@@ -1,7 +1,7 @@
 {{>navbar}}
 <section>
     <h1>Movies</h1>
-    <form id = "form">
+    <form id = "form" method="get" action="/fetchMovies">
         <label>Movies<label>
         <br>
         <label>with the number of actors/actresses</label>
@@ -25,6 +25,7 @@
         <label>with a genre of</label>
         <input name="genre" id="genre" placeholder="Genre">
         <br>
-        <button id ="formsumbit">Submit!</button>
+        <input type="submit" id ="formsumbit"></submit>
+        {{!-- <button id ="formsumbit">Submit!</button> --}}
     </form>
 </section>

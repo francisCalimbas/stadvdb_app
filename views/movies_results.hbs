@@ -1,0 +1,8 @@
+{{>navbar}}
+<section>
+    <h1>Movies</h1>
+    {{#each results}}
+    {{!--  movie_name: 'name', role_cnt: 123--}}
+        {{this.movie_name}}, {{this.role_cnt}} <br>
+    {{/each}}
+</section>
