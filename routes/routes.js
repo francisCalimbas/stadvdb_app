@@ -14,7 +14,7 @@ app.get('/', controller.getHome)
 app.get('/directors', controller.getDirectors)
 app.get('/movies', controller.getMovies)
 app.get('/genres', controller.getGenres)
-app.post('/fetchDirectors', controller.fetchDirectors)
+app.get('/fetchDirectors', controller.fetchDirectors)
 
 
 

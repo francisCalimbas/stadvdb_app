@@ -59,11 +59,11 @@ const controller = {
       genre:formdata[4].value
     */
    console.log('fetchdirec')
-    const choice = req.body.numofmovieschoice;
-    const numofmoviesint = req.body.numofmoviesint;
-    const releasedonschoice = req.body.releasedonschoice;
-    const releasedonint = req.body.releasedonint;
-    const genre = req.body.genre;
+    const choice = req.query.numofmovieschoice;
+    const numofmoviesint = req.query.numofmoviesint;
+    const releasedonschoice = req.query.releasedonschoice;
+    const releasedonint = req.query.releasedonint;
+    const genre = req.query.genre;
 
     let query = 'SELECT CONCAT(`F`.first_name, " ", `F`.last_name) AS director, COUNT(`F`.movie_name) AS movie_cnt, `F`.`year` ' +
                   'FROM fact_table `F` ' +
@@ -100,13 +100,19 @@ const controller = {
       query = query.concat(' HAVING `movie_cnt` < ' + numofmoviesint);
     }
 
-    query = query + ' LIMIT 0, 10;';
+    query = query + ';';
     console.log(query);
     db.query(query, function(err, results, fields) {
       if (err) console.log(err);
       else {
         console.log(results); // results contains rows returned by server
-        res.send(true);
+        const data = {
+          styles: ['style'],
+          scripts: [ 'navbar','genre'],
+          title: "Genres", // title of the web page
+          results: results
+        }
+        res.render('director_results', data);
       }
     })
   },

@@ -1,0 +1,8 @@
+{{>navbar}}
+<section>
+    <h1>Director</h1>
+    {{#each results}}
+    {{!-- director: 'Véronique Aubouy', movie_cnt: 2, year: 1994 --}}
+        {{this.director}}, {{this.movie_cnt}}, {{this.year}} <br>
+    {{/each}}
+</section>

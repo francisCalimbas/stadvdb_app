@@ -1,14 +1,15 @@
 const mysql = require('mysql2');
 
 // create the connection to database
-const connection = mysql.createConnection({
+const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '12345',
+  port: '3306',
   database: 'imdb_dw1'
 });
  
-connection.connect();
+db.connect();
 
 // connection.query(
 //     'SELECT * FROM `fact_table` LIMIT 0, 10',
@@ -19,5 +20,5 @@ connection.connect();
 // );
 
 module.exports = {
-    db: connection
+  db: db
 }
