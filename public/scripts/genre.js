@@ -10,8 +10,6 @@ $(document).ready(function () {
             releasedonint: formdata[3].value,
             genre:formdata[4].value
         }
-
-        alert("remove this in the future")
     })
     
 })

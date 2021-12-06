@@ -11,6 +11,5 @@ $(document).ready(function () {
             genre:formdata[4].value
         }
         console.log(data)
-        alert("remove this in the future")
     })
 })
