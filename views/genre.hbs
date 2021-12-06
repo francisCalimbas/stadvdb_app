@@ -1,3 +1,5 @@
+
+{{!--
 {{>navbar}}
 <section>
     <h1>Genre</h1>
@@ -28,4 +30,44 @@
         <input type="submit" id ="formsumbit"></submit>
         {{!-- <button id ="formsumbit">Submit!</button> --}}
     </form>
+</section>
+--}}
+
+{{>navbar}}
+
+<section>
+    <h1 style = "padding-left: 700px;">MOVIES QUERY</h1>
+    <form style = "display: inline-block; padding-left: 600px;" id = "form" method="get" action="/fetchDirectors">
+  <div>
+    <label>Number of Movies with a genre of</label>
+        <input name="genre" id="genre" placeholder="Genre">
+        <br>
+        <br>
+        <label>that have a rank of</label>
+        <select name="rankchoice" id="rankchoice" >
+            <option value = "" selected='true'></option>
+            <option value="ATLEAST">ATLEAST</option>
+            <option value="EQUAL TO">EQUAL TO</option>
+            <option value="LESS THAN">LESS THAN</option>
+        </select>
+        <input name="rankint" id="rankint" placeholder="Rank">
+        <br>
+        <br>
+        </label>released on</label>
+        <select name="releasedonschoice" id="releasedonschoice" >
+            <option value = "" selected='true'></option>
+            <option value="ATLEAST">ATLEAST</option>
+            <option value="EQUAL TO">EQUAL TO</option>
+            <option value="LESS THAN">LESS THAN</option>
+        </select>
+        <input name="releasedonint" id="releasedonint" placeholder="Year">
+        <br>
+        <br>
+
+  <!-- Submit button -->
+  <input type="submit" id ="formsumbit" class="btn btn-primary btn-block mb-4"></submit>
+
+  </div>
+</form>
+
 </section>
